@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Eleven Robotics | Robotics System on Modules</title>
+  <meta name="description" content="View and checkout your Eleven Robotics System on Module cart. Secure checkout using Razorpay test integration.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function(){
+      emailjs.init({
+        publicKey: "YOUR_EMAILJS_PUBLIC_KEY", // Replace with your EmailJS public key
+      });
+    })();
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img src="assets/images/logo.svg" alt="Eleven Robotics logo" class="brand-logo">
+        <span class="brand-text">
+          <span class="brand-name">Eleven Robotics</span>
+          <span class="brand-tagline">System on Modules for Robotics</span>
+        </span>
+      </a>
+      <nav class="main-nav" id="main-nav">
+        <ul>
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="products.html" class="nav-link">Products</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="quote.html" class="nav-link">Get Quote</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li>
+            <a href="cart.html" class="nav-link nav-cart-link active">
+              Cart
+              <span class="cart-count-badge" id="cart-count">0</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span class="nav-toggle-line"></span>
+        <span class="nav-toggle-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1>Your Cart</h1>
+        <p>Review your System-on-Modules and proceed to secure checkout with Razorpay test environment.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container cart-layout" id="cart-root">
+        <div class="cart-main">
+          <div class="cart-state" id="cart-loading">Loading cart...</div>
+          <div class="cart-state cart-state-empty" id="cart-empty" hidden>
+            <p>Your cart is empty.</p>
+            <a href="products.html" class="btn btn-primary">Browse Products</a>
+          </div>
+
+          <div class="cart-table-wrapper" id="cart-table-wrapper" hidden>
+            <table class="cart-table">
+              <thead>
+                <tr>
+                  <th>Product</th>
+                  <th>Quantity</th>
+                  <th>Price</th>
+                  <th>Subtotal</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody id="cart-items-body">
+                <!-- rows injected -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <aside class="cart-summary" id="cart-summary" hidden>
+          <h2>Order Summary</h2>
+          <div class="summary-row">
+            <span>Items</span>
+            <span id="cart-items-count">0</span>
+          </div>
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <span id="cart-subtotal">₹0</span>
+          </div>
+          <div class="summary-row summary-row-total">
+            <span>Total</span>
+            <span id="cart-total">₹0</span>
+          </div>
+          <p class="summary-note">Prices are indicative demo values and include test taxes where applicable.</p>
+
+          <button class="btn btn-primary btn-full" id="cart-checkout-btn">Proceed to Checkout</button>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="checkout-section" hidden>
+      <div class="container">
+        <h2>Shipping &amp; Payment</h2>
+        <p>Enter your shipping details to continue to Razorpay test payment.</p>
+        <form id="checkout-form" name="cart-checkout" data-netlify="true" netlify netlify-honeypot="bot-field" class="form-grid" autocomplete="on" novalidate>
+          <input type="hidden" name="form-name" value="cart-checkout">
+          <p class="hidden">
+            <label>Don't fill this out if you're human: <input name="bot-field"></label>
+          </p>
+          <input type="hidden" name="status" value="">
+          <input type="hidden" name="payment_id" value="">
+          <input type="hidden" name="error_message" value="">
+          <input type="hidden" name="items" value="">
+          <input type="hidden" name="total_amount" value="">
+
+          <div class="form-field">
+            <label for="checkout-name">Full Name</label>
+            <input type="text" id="checkout-name" name="name" required>
+          </div>
+          <div class="form-field">
+            <label for="checkout-email">Email</label>
+            <input type="email" id="checkout-email" name="email" required>
+          </div>
+          <div class="form-field">
+            <label for="checkout-phone">Phone</label>
+            <input type="tel" id="checkout-phone" name="phone" required>
+          </div>
+          <div class="form-field form-field-full">
+            <label for="checkout-address">Shipping Address</label>
+            <textarea id="checkout-address" name="address" rows="3" required></textarea>
+          </div>
+          <div class="form-footer">
+            <button type="submit" class="btn btn-primary" id="razorpay-pay-btn">Pay with Razorpay (Test)</button>
+            <p class="form-footnote">
+              You will be redirected to a Razorpay test payment popup. No real charges will be made.
+            </p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="assets/images/logo.svg" alt="Eleven Robotics logo" class="footer-logo">
+        <p>Eleven Robotics builds reliable compute foundations for robots, autonomous systems, and embedded AI.</p>
+      </div>
+      <div class="footer-columns">
+        <div class="footer-column">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="quote.html">Get Quote</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Policies</h4>
+          <ul>
+            <li><a href="policies/privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="policies/terms.html">Terms &amp; Conditions</a></li>
+            <li><a href="policies/shipping.html">Shipping Policy</a></li>
+            <li><a href="policies/refund.html">Refund Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Contact</h4>
+          <ul class="footer-contact-list">
+            <li>Email: <a href="mailto:hello@elevenrobotics.com">hello@elevenrobotics.com</a></li>
+            <li>Phone: +91-00000-00000</li>
+            <li>Location: Bengaluru, India</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <span>&copy; <span id="footer-year"></span> Eleven Robotics. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/razorpay.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

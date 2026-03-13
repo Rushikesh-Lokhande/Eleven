@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Eleven Robotics | Robotics System on Modules</title>
+  <meta name="description" content="Request a bulk quote from Eleven Robotics for System on Modules for robotics and embedded AI deployments.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function(){
+      emailjs.init({
+        publicKey: "YOUR_EMAILJS_PUBLIC_KEY", // Replace with your EmailJS public key
+      });
+    })();
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img src="assets/images/logo.svg" alt="Eleven Robotics logo" class="brand-logo">
+        <span class="brand-text">
+          <span class="brand-name">Eleven Robotics</span>
+          <span class="brand-tagline">System on Modules for Robotics</span>
+        </span>
+      </a>
+      <nav class="main-nav" id="main-nav">
+        <ul>
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="products.html" class="nav-link">Products</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="quote.html" class="nav-link active">Get Quote</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li>
+            <a href="cart.html" class="nav-link nav-cart-link">
+              Cart
+              <span class="cart-count-badge" id="cart-count">0</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span class="nav-toggle-line"></span>
+        <span class="nav-toggle-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1>Bulk &amp; OEM Quotes</h1>
+        <p>Tell us about your robots, volumes, and timelines. We&apos;ll respond with pricing and guidance.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container quote-grid">
+        <div class="quote-copy">
+          <h2>Work with an Engineering-Focused Supplier</h2>
+          <p>
+            Whether you&apos;re rolling out a fleet of mobile robots or building a new generation of automation
+            equipment, we can help with sizing, thermal design, and lifecycle planning.
+          </p>
+          <ul>
+            <li>Volume-based pricing and supply planning</li>
+            <li>Design reviews for carrier boards and enclosures</li>
+            <li>Long-term support and roadmap visibility</li>
+          </ul>
+        </div>
+
+        <div class="quote-form-wrapper">
+          <form id="quote-form" class="form-grid">
+
+            <div class="form-field">
+              <label for="quote-name">Name</label>
+              <input type="text" id="quote-name" name="name" required>
+            </div>
+            <div class="form-field">
+              <label for="quote-email">Email</label>
+              <input type="email" id="quote-email" name="email" required>
+            </div>
+            <div class="form-field">
+              <label for="quote-company">Company</label>
+              <input type="text" id="quote-company" name="company" required>
+            </div>
+            <div class="form-field">
+              <label for="quote-role">Role</label>
+              <input type="text" id="quote-role" name="role">
+            </div>
+            <div class="form-field">
+              <label for="quote-product">Target SoM</label>
+              <select id="quote-product" name="product">
+                <option value="">Select a module</option>
+                <option value="Eleven SoM X1">Eleven SoM X1</option>
+                <option value="Eleven SoM X2">Eleven SoM X2</option>
+                <option value="Eleven SoM Lite">Eleven SoM Lite</option>
+                <option value="Eleven SoM Pro">Eleven SoM Pro</option>
+                <option value="Not sure yet">Not sure yet</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="quote-quantity">Estimated Quantity</label>
+              <input type="number" id="quote-quantity" name="quantity" min="1" step="1">
+            </div>
+            <div class="form-field form-field-full">
+              <label for="quote-timeline">Timeline</label>
+              <input type="text" id="quote-timeline" name="timeline" placeholder="e.g. 50 units in Q3, 500 units next year">
+            </div>
+            <div class="form-field form-field-full">
+              <label for="quote-details">Application &amp; Requirements</label>
+              <textarea id="quote-details" name="details" rows="4" placeholder="Tell us about your robots, environment, power constraints, and any standards you need to meet." required></textarea>
+            </div>
+            <div class="form-footer">
+              <button type="submit" class="btn btn-primary">Request Quote</button>
+              <p class="form-footnote">
+                A member of our team will follow up with pricing and technical notes, usually within one business day.
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="assets/images/logo.svg" alt="Eleven Robotics logo" class="footer-logo">
+        <p>Eleven Robotics builds reliable compute foundations for robots, autonomous systems, and embedded AI.</p>
+      </div>
+      <div class="footer-columns">
+        <div class="footer-column">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="quote.html">Get Quote</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Policies</h4>
+          <ul>
+            <li><a href="policies/privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="policies/terms.html">Terms &amp; Conditions</a></li>
+            <li><a href="policies/shipping.html">Shipping Policy</a></li>
+            <li><a href="policies/refund.html">Refund Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Contact</h4>
+          <ul class="footer-contact-list">
+            <li>Email: <a href="mailto:hello@elevenrobotics.com">hello@elevenrobotics.com</a></li>
+            <li>Phone: +91-00000-00000</li>
+            <li>Location: Bengaluru, India</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <span>&copy; <span id="footer-year"></span> Eleven Robotics. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Prefill quote form from URL, e.g. quote.html?product=Eleven%20SoM%20X1
+    document.addEventListener("DOMContentLoaded", function () {
+      var select = document.getElementById("quote-product");
+      if (!select) return;
+      try {
+        var params = new URLSearchParams(window.location.search || "");
+        var productName = (params.get("product") || "").trim();
+        if (!productName) return;
+        for (var i = 0; i < select.options.length; i++) {
+          if (select.options[i].value === productName) {
+            select.value = productName;
+            break;
+          }
+        }
+      } catch (e) {
+        // ignore
+      }
+    });
+  </script>
+</body>
+</html>

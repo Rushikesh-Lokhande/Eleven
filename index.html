@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Eleven Robotics | Robotics System on Modules</title>
+  <meta name="description" content="Eleven Robotics builds high performance System on Modules for robotics, automation, and embedded AI systems.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img src="assets/images/logo.svg" alt="Eleven Robotics logo" class="brand-logo">
+        <span class="brand-text">
+          <span class="brand-name">Eleven Robotics</span>
+          <span class="brand-tagline">System on Modules for Robotics</span>
+        </span>
+      </a>
+      <nav class="main-nav" id="main-nav">
+        <ul>
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="products.html" class="nav-link">Products</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="quote.html" class="nav-link">Get Quote</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li>
+            <a href="cart.html" class="nav-link nav-cart-link">
+              Cart
+              <span class="cart-count-badge" id="cart-count">0</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span class="nav-toggle-line"></span>
+        <span class="nav-toggle-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <h1>Compute Power for the Next Generation of Robotics</h1>
+          <p>
+            From industrial automation to mobile robots, our modules deliver dependable performance, predictable timing, and a long service life.
+          </p>
+          <div class="hero-actions">
+            <a href="products.html" class="btn btn-primary">Explore Products</a>
+            <a href="quote.html" class="btn btn-outline">Need Bulk Order? Get Quote</a>
+          </div>
+          <div class="hero-highlights">
+            <div class="highlight-item">
+              <span class="highlight-label">Up to</span>
+              <span class="highlight-value">45 TOPS</span>
+              <span class="highlight-caption">Edge AI performance</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-label">From</span>
+              <span class="highlight-value">8 W</span>
+              <span class="highlight-caption">Typical power draw</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-label">Up to</span>
+              <span class="highlight-value">15 yrs</span>
+              <span class="highlight-caption">Industrial lifecycle</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-board">
+            <div class="board-top">
+              <span class="badge">SoM Family</span>
+              <span class="board-label">Eleven SoM X-Series</span>
+            </div>
+            <div class="board-image-placeholder">
+              <img src="assets/images/product-images/SoM.jpegl" alt="Eleven Robotics System on Module illustration">
+            </div>
+            <div class="board-specs">
+              <div>
+                <span class="spec-label">CPU</span>
+                <span class="spec-value">8-core ARM Cortex-A78</span>
+              </div>
+              <div>
+                <span class="spec-label">GPU</span>
+                <span class="spec-value">Embedded RTX-class</span>
+              </div>
+              <div>
+                <span class="spec-label">I/O</span>
+                <span class="spec-value">CSI, PCIe, CAN-FD, EtherCAT</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="section" id="featured-products">
+      <div class="container section-header">
+        <h2>Featured System-on-Modules</h2>
+        <p>Pick the right compute module for your next robot, AMR, or embedded AI deployment.</p>
+      </div>
+      <div class="container">
+        <div class="products-grid" id="featured-products-grid" aria-live="polite">
+          <!-- Populated by JS -->
+        </div>
+        <div class="section-footer-link">
+          <a href="products.html" class="link-arrow">View all products</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technology -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <h2>Modular Compute Built for Real-World Robotics</h2>
+          <p>Eleven System-on-Modules are engineered for demanding robotics applications where thermal behavior, deterministic latency, and long-term availability matter as much as raw performance.</p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card">
+            <div class="feature-icon">🧩</div>
+            <h3>Modular Compute</h3>
+            <p>Scale from prototype to fleet without redesigning your carrier board. One pinout, many performance tiers.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">⚙️</div>
+            <h3>Robotics Integration</h3>
+            <p>Built-in support for industrial buses, multi‑camera I/O, and real‑time Linux for predictable motion control.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">🧠</div>
+            <h3>Embedded AI Ready</h3>
+            <p>Optimized for TensorRT and ONNX Runtime so vision, perception, and planning run locally with low latency.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">🛡️</div>
+            <h3>Industrial Reliability</h3>
+            <p>Extended temperature ratings, robust power handling, and long lifecycle availability for real deployments.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="section">
+      <div class="container section-header">
+        <h2>Why Choose Us</h2>
+        <p>We build hardware that helps teams move faster, ship safer, and keep systems running in the real world.</p>
+      </div>
+      <div class="container feature-grid">
+        <article class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3>High Performance</h3>
+          <p>Multi‑core compute with predictable timing, so your perception and control loops stay smooth.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">🧩</div>
+          <h3>Modular Architecture</h3>
+          <p>Mix and match compute, I/O, and expansion modules to fit your platform without redesigning hardware.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">👩‍💻</div>
+          <h3>Developer Friendly</h3>
+          <p>Open APIs, sample code, and ready-to-run images get you from prototype to field tests faster.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">🛡️</div>
+          <h3>Reliable Hardware</h3>
+          <p>Industrial-grade components and rigorous testing mean less downtime and more confidence in the field.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Applications -->
+    <section class="section section-alt">
+      <div class="container section-header">
+        <h2>Applications</h2>
+        <p>See how our modules power next-gen robotics across automation, autonomous systems, and edge AI.</p>
+      </div>
+      <div class="container feature-grid">
+        <article class="feature-card">
+          <div class="feature-icon">🤖</div>
+          <h3>Robotics</h3>
+          <p>Autonomous platforms, mobile manipulators, and service robots built for real environments.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">🏭</div>
+          <h3>Automation</h3>
+          <p>Vision-guided pick & place, conveyor systems, and smart factory equipment that run reliably.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">🧠</div>
+          <h3>Edge AI</h3>
+          <p>Run models locally with low latency and high throughput for vision, perception, and inference.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">🚗</div>
+          <h3>Autonomous Systems</h3>
+          <p>Systems that perceive, plan, and act in complex environments with trust and safety.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="section cta-section">
+      <div class="container cta-inner">
+        <div class="cta-text">
+          <h2>Planning a Fleet or Large Deployment?</h2>
+          <p>
+            Talk to our engineering team about volume pricing, thermal tuning, and design reviews for your next
+            generation of robots.
+          </p>
+        </div>
+        <div class="cta-actions">
+          <a href="quote.html" class="btn btn-primary">Get Bulk Quote</a>
+          <a href="contact.html" class="btn btn-ghost">Talk to an Engineer</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="assets/images/logo.svg" alt="Eleven Robotics logo" class="footer-logo">
+        <p>Eleven Robotics builds reliable compute foundations for robots, autonomous systems, and embedded AI.</p>
+      </div>
+      <div class="footer-columns">
+        <div class="footer-column">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="quote.html">Get Quote</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Policies</h4>
+          <ul>
+            <li><a href="policies/privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="policies/terms.html">Terms &amp; Conditions</a></li>
+            <li><a href="policies/shipping.html">Shipping Policy</a></li>
+            <li><a href="policies/refund.html">Refund Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Contact</h4>
+          <ul class="footer-contact-list">
+            <li>Email: <a href="mailto:hello@elevenrobotics.com">hello@elevenrobotics.com</a></li>
+            <li>Phone: +91-00000-00000</li>
+            <li>Location: Bengaluru, India</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <span>&copy; <span id="footer-year"></span> Eleven Robotics. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Render featured products on home
+    document.addEventListener('DOMContentLoaded', function () {
+      var container = document.getElementById('featured-products-grid');
+      if (!container || !window.products) return;
+
+      var featured = products.slice(0, 4);
+      featured.forEach(function (product) {
+        var card = document.createElement('article');
+        card.className = 'product-card';
+        card.innerHTML = `
+          <div class="product-card-image">
+            <img src="${product.image}" alt="${product.name}">
+          </div>
+          <div class="product-card-body">
+            <h3>${product.name}</h3>
+            <p class="product-card-description">${product.description}</p>
+            <p class="product-card-price">₹${product.price.toLocaleString("en-IN")}</p>
+            <div class="product-card-actions">
+              <button class="btn btn-sm btn-secondary" data-add-to-cart data-product-id="${product.id}">Add to Cart</button>
+              <a class="btn btn-sm btn-ghost" href="${product.detailPage}">View Product</a>
+            </div>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+
+      if (window.Cart) {
+        Cart.bindAddToCartButtons();
+      }
+    });
+  </script>
+</body>
+</html>
